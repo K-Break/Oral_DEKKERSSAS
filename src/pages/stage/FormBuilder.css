@@ -1,0 +1,193 @@
+/* ── FormBuilder Page ─────────────────────────── */
+
+.formbuilder {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Header */
+.formbuilder__header {
+  margin-bottom: 32px;
+}
+
+.formbuilder__header .label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.formbuilder__header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.formbuilder__header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 600px;
+}
+
+/* Main 2-column layout */
+.formbuilder__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: stretch;
+}
+
+/* Left: Abstraction card */
+.formbuilder__abstraction {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.formbuilder__abstraction:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.formbuilder__abstraction-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text-white);
+}
+
+/* Levels */
+.formbuilder__level {
+  margin-bottom: 20px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(255, 143, 0, 0.3);
+}
+
+.formbuilder__level:last-child {
+  margin-bottom: 0;
+}
+
+.formbuilder__level-number {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.formbuilder__level-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 4px;
+}
+
+.formbuilder__level-desc {
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* Right: Screenshot */
+.formbuilder__screenshot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.formbuilder__screenshot-label {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.formbuilder__screenshot img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Bottom 2-card grid */
+.formbuilder__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formbuilder__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.formbuilder__card:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.formbuilder__card-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Field types grid */
+.formbuilder__field-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.formbuilder__field-type {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.formbuilder__field-type svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+}
+
+/* Conditional logic */
+.formbuilder__logic-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.formbuilder__logic-label svg {
+  width: 16px;
+  height: 16px;
+}
+
+.formbuilder__logic-desc {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin: 0;
+}

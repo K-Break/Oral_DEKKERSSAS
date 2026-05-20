@@ -1,0 +1,13 @@
+.stage-layout {
+  position: relative;
+  min-height: 100vh;
+}
+
+.stage-layout__content {
+  padding-left: calc(56px + 40px);
+  padding-right: var(--page-padding);
+  padding-top: calc(56px + 50px);
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}

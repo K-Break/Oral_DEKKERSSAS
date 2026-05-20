@@ -1,0 +1,219 @@
+/* ===== PdfSignature Page ===== */
+
+.pdfsig {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+
+.pdfsig__header {
+  margin-bottom: 32px;
+}
+
+.pdfsig__header .label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pdfsig__header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.pdfsig__header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ---- Top Row Grid ---- */
+
+.pdfsig__top {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+/* ---- Glass Cards ---- */
+
+.pdfsig__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pdfsig__card:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.pdfsig__card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.pdfsig__card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+/* ---- Tech Content ---- */
+
+.pdfsig__tech-name {
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.pdfsig__tech-desc {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.pdfsig__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 16px 0;
+}
+
+/* ---- Signature Label ---- */
+
+.pdfsig__sig-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-gray);
+  margin-top: 4px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* ---- Signature Flow ---- */
+
+.pdfsig__flow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pdfsig__flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  flex: 1;
+}
+
+.pdfsig__flow-step-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.pdfsig__flow-step-desc {
+  font-size: 0.7rem;
+  color: var(--text-gray);
+}
+
+.pdfsig__flow-step--highlight .icon-circle {
+  background: rgba(255, 143, 0, 0.2);
+  border-color: rgba(255, 143, 0, 0.5);
+}
+
+.pdfsig__flow-arrow {
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+}
+
+/* ---- Milestone ---- */
+
+.pdfsig__milestone {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 28px;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pdfsig__milestone:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.pdfsig__milestone .icon-circle--orange {
+  background: rgba(255, 143, 0, 0.15);
+  border-color: rgba(255, 143, 0, 0.4);
+  flex-shrink: 0;
+}
+
+.pdfsig__milestone-content {
+  flex: 1;
+}
+
+.pdfsig__milestone-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pdfsig__milestone-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin-bottom: 8px;
+}
+
+.pdfsig__milestone-desc {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.pdfsig__milestone-img {
+  max-height: 140px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transform: rotate(-2deg);
+  flex-shrink: 0;
+}
+
+/* ---- Animations ---- */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}

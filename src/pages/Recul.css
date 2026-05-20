@@ -1,0 +1,161 @@
+/* ========== RECUL PAGE ========== */
+
+.recul {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: calc(56px + 50px);
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+.recul__header {
+  margin-bottom: 40px;
+}
+
+.recul__header .label {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.recul__header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.25;
+  font-style: italic;
+}
+
+.recul__header h1 span {
+  color: var(--primary);
+}
+
+/* ---------- Grid ---------- */
+.recul__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------- Cards ---------- */
+.recul__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color 0.3s;
+}
+
+.recul__card:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+}
+
+.recul__card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.recul__card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+/* ---------- Flow (before → after) ---------- */
+.recul__flow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recul__flow-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recul__flow-old {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  flex: 1;
+}
+
+.recul__flow-old svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.recul__flow-arrow {
+  color: var(--text-gray);
+  opacity: 0.4;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.recul__flow-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-white);
+  font-weight: 500;
+  flex: 1;
+  background: rgba(255, 143, 0, 0.08);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 143, 0, 0.15);
+}
+
+.recul__flow-new svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+/* ---------- Axes ---------- */
+.recul__axes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.recul__axe {
+  padding-left: 12px;
+  border-left: 2px solid rgba(255, 143, 0, 0.3);
+}
+
+.recul__axe-title {
+  font-weight: 600;
+  color: var(--text-white);
+  margin-bottom: 4px;
+  font-size: 0.9375rem;
+}
+
+.recul__axe-desc {
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.anim-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.55s ease-out forwards;
+}

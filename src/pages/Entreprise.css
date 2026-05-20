@@ -1,0 +1,216 @@
+/* ========== ENTREPRISE PAGE ========== */
+
+.entreprise {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.entreprise__container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: calc(56px + 50px);
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+  padding-bottom: 40px;
+}
+
+/* ---------- Header ---------- */
+.entreprise__header {
+  margin-bottom: 36px;
+}
+
+.entreprise__header .label {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.entreprise__header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.entreprise__header p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* ---------- Grid ---------- */
+.entreprise__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ---------- Cards ---------- */
+.entreprise__card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color var(--transition-fast),
+              transform var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.entreprise__card:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 143, 0, 0.06);
+}
+
+.entreprise__card--full {
+  grid-column: 1 / -1;
+}
+
+/* ---------- Card titles ---------- */
+.entreprise__card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-white);
+}
+
+/* ---------- Specialty block ---------- */
+.entreprise__card--specialty {
+  display: flex;
+  flex-direction: column;
+}
+
+.entreprise__specialty {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.entreprise__specialty:last-child {
+  margin-bottom: 0;
+}
+
+.entreprise__specialty-name {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.entreprise__specialty-desc {
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ---------- Right stacked column ---------- */
+.entreprise__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ---------- Info cards (Fondateur / Structure) ---------- */
+.entreprise__info-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.entreprise__info-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+.entreprise__info-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--text-white);
+  line-height: 1.2;
+}
+
+.entreprise__info-detail {
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Contexte Actuel ---------- */
+.entreprise__context-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.entreprise__context-sub {
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  margin-top: 2px;
+}
+
+/* ---------- Flow diagram ---------- */
+.entreprise__flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.entreprise__flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.entreprise__flow-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: var(--text-gray);
+  border-top: 2px dashed var(--text-gray);
+  width: 60px;
+  position: relative;
+}
+
+.entreprise__flow-arrow-icon {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.entreprise__flow-digital {
+  color: var(--primary);
+  font-style: italic;
+}
+
+/* ---------- Staggered entry animations ---------- */
+.entreprise__card.animate-in.animate-in-delay-1 {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
+}
+
+.entreprise__stack .entreprise__card.animate-in.animate-in-delay-2 {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+.entreprise__stack .entreprise__card.animate-in.animate-in-delay-3 {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.45s both;
+}
+
+.entreprise__card.animate-in.animate-in-delay-4 {
+  animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.6s both;
+}
