@@ -1,49 +1,26 @@
 # Soutenance DEKKERS SAS — V2 (11 slides, ~15 min)
 
-> [!IMPORTANT]
-> **Changements majeurs vs V1 :**
-> - Accroche d'intro percutante (acronymes)
-> - Structure simplifiée : Entreprise → Stage (sous-parties) → Difficultés → Conclusion
-> - Difficultés enrichies avec liens IUT/Canada + problématique tissée dedans
-> - Nouveaux contenus ajoutés : Véhicules, Formations, WordPress
-> - Modules moins marquants (GED, Agenda, Notifs) réduits à des mentions rapides
-
----
 
 ## Slide 1 — Couverture + Accroche (~45 sec)
 
-### Sur la slide
-Même design sombre que tu as commencé. Logo, titre, dates, infos.
-
 ### Ce que tu dis (L'ACCROCHE)
 
-> "TMD... DUERP... CSA... ADR 1.3... GTP..."
+> "TMD... DUERP... CSA-GTP... ADR 1.3..."
+
+Charte de Sécurité Alimentaire – Good Trading Practice
+Accord relatif au transport international des marchandises Dangereuses par Route
 >
 > *(pause, regard vers le jury)*
 >
-> "Autant d'acronymes qui ne me disaient absolument rien il y a encore trois mois. Et pourtant, pendant douze semaines, j'ai dû non seulement les comprendre, mais les transformer en lignes de code. En une application numérique capable de les gérer au quotidien."
+> "Autant d'acronymes qui ne me disaient absolument rien il y a encore trois mois. Et pourtant, pendant douze semaines, Et pourtant, pendant douze semaines, Autant d'acronymes que j'ai du apprendre et avec lesquels j'ai du travailler."
 >
 > "Je m'appelle Kévin Morillo, je suis en troisième année de BUT MMI, et voici comment un développeur web s'est retrouvé plongé dans l'univers des audits réglementaires et du transport de matières dangereuses."
-
-> [!TIP]
-> **Pourquoi ça marche** : tu crées un décalage immédiat entre ton monde (le dev web) et celui de DEKKERS (QHSE/TMD). Le jury est accroché. Tu montres dès la première seconde que tu as dû sortir de ta zone de confort.
 
 ---
 
 ## Slide 2 — Sommaire (~15 sec)
 
 ### Sur la slide
-```
-01. L'entreprise
-02. Le stage
-    ├── Mission & méthodologie
-    ├── Architecture technique
-    ├── Le Form Builder
-    ├── Génération PDF & Signature
-    └── Modules avancés
-03. Difficultés & apprentissages
-04. Conclusion
-```
 
 ### Ce que tu dis
 > "Ma présentation s'articulera autour de quatre temps : l'entreprise, le détail de mes réalisations techniques, les difficultés rencontrées et ce qu'elles m'ont appris, et enfin ma conclusion."
@@ -52,21 +29,10 @@ Même design sombre que tu as commencé. Logo, titre, dates, infos.
 
 ## Slide 3 — L'entreprise (~1 min 15)
 
-### Sur la slide
-**"DEKKERS SAS — Conseil, Audit & Prévention des risques"**
-
-- Fondée en 2013 à Béziers par Johannes DEKKERS
-- Spécialité : **QHSE & TMD** — audits réglementaires
-- Formation certifiée **QUALIOPI**
-- **3 personnes** : M. DEKKERS (DG), Gauthier BALP (alternant QHSE), John RIVEMALE (secrétaire)
-- Contexte : processus manuels (Excel, Word, papier) → besoin de digitalisation
-
-Petit visuel : « Pourquoi DEKKERS ? » → Candidature spontanée depuis le Canada
-
 ### Ce que tu dis
-> "DEKKERS SAS est un cabinet fondé en 2013, spécialisé dans le conseil et l'audit QHSE — tous ces fameux acronymes que je viens de citer. C'est une TPE de 3 personnes, ce qui m'a donné un accès direct au dirigeant."
+> "DEKKERS SAS est une entreprise fondé en 2013, spécialisé dans le conseil et l'audit QHSE. C'est une TPE de 3 personnes, le directeur DEKKERS Johannes, balp gauthier alternant QHSE, et Rivemal john le secretaire."
 >
-> "Le contexte est simple : quand je suis arrivé, chaque audit était réalisé sur Excel ou Word, sans centralisation ni automatisation. M. DEKKERS avait besoin de digitaliser ses processus. C'est ce besoin qui a créé mon poste."
+> "A mon arrivé, chaque audit était réalisé sur Excel ou Word, sans rell centralisation ni automatisation. M. DEKKERS avait besoin de digitaliser ses processus. C'est ce besoin qui a créé mon poste."
 >
 > "J'ai découvert cette entreprise depuis le Canada, où j'étais en échange universitaire. Mon stage initial étant tombé à l'eau, j'ai envoyé une candidature spontanée. Un mail, un entretien en visio, et la mission était lancée."
 
@@ -74,43 +40,16 @@ Petit visuel : « Pourquoi DEKKERS ? » → Candidature spontanée depuis le Can
 
 ## Slide 4 — Mission & Méthodologie (~1 min 15)
 
-### Sur la slide
-**"02. Le stage — La DEKKERS App, de zéro"**
-
-🎯 **Objectif** : Application web complète — créer, remplir, signer et archiver les audits réglementaires
-
-📱 **Usage** : PC bureau + tablette terrain
-
-🏗️ **Aucun code existant** → tout à construire, seul développeur
-
-🔄 **Méthode** :
-- Point matinal quotidien avec M. DEKKERS
-- Itérations continues — déploiement puis retours terrain
-- Post-its → notes téléphone → pilotage en temps réel
-
 ### Ce que tu dis
-> "Ma mission : concevoir et développer de zéro une application web métier complète. Elle devait permettre de créer des modèles d'audit, de les remplir sur tablette en intervention, de générer les rapports PDF et de les faire signer numériquement."
+> "Ma mission était la suivante : concevoir et développer de zéro une application web métier complète. Elle devait permettre de créer des modèles d'audit, de les remplir sur tablette en intervention, de générer les rapports PDF et de les faire signer numériquement."
 >
-> "J'étais seul développeur, avec une autonomie totale. Ma méthodologie reposait sur un point matinal quotidien avec M. DEKKERS — une vraie session de pilotage où je récupérais ses retours. Puis je déployais régulièrement en production pour avoir des retours terrain immédiats. C'est cette boucle courte qui a rendu le projet efficace."
+> "J'étais seul développeur, avec une autonomie totale et la programmation web n'était pas du tout le coeur de métier de mr DEKKERS.. 
+
+Ma méthodologie reposait sur un point matinal quotidien avec M. DEKKERS — une vraie session de pilotage où je récupérais ses retours. Puis je déployais régulièrement en production pour avoir des retours terrain immédiats. C'est cette boucle courte qui a rendu le projet efficace."
 
 ---
 
 ## Slide 5 — Architecture technique (~1 min 15)
-
-### Sur la slide
-**"Architecture technique"**
-
-Schéma Docker simplifié (ton Annexe 04 stylisé dark) :
-
-| Couche | Technologies |
-|---|---|
-| **Frontend** | React · TypeScript · Vite · TailwindCSS · Shadcn/UI |
-| **Backend** | Node.js · Hono · Drizzle ORM · Better Auth · Puppeteer |
-| **BDD** | PostgreSQL (JSONB) |
-| **Production** | Docker (4 containers) · Caddy · VPS OVH |
-| **Externe** | SFTP (stockage PDF) · Resend (emails) · Google API |
-
-En bas : *"IA en support : Gemini (documentation) · Claude (logique/debug)"*
 
 ### Ce que tu dis
 > "J'ai eu carte blanche sur les technologies. J'ai construit une stack moderne — React TypeScript en front, Node.js avec Hono en back, PostgreSQL avec du JSONB pour stocker des structures de formulaires flexibles."
@@ -122,24 +61,6 @@ En bas : *"IA en support : Gemini (documentation) · Claude (logique/debug)"*
 ---
 
 ## Slide 6 — Le Form Builder (~2 min)
-
-### Sur la slide
-**"Le Form Builder — Cœur de l'application"**
-
-*"Comment abstraire des dizaines de formulaires réglementaires différents en un seul système ?"*
-
-Structure : `Partie → Ligne → Colonnes (types variés)`
-
-Types : ☑️ Checkbox · 📝 Texte · 🔽 Dropdown · 📷 Photo · ✍️ Signature · 📄 Upload · 🔢 Numérique
-
-Logique conditionnelle :
-- Intra-ligne : "Non Conforme" → observation obligatoire
-- Globale : question → masque/affiche une section entière
-
-Fonctionnalités productivité : duplication, drag & drop, copier-coller de logiques
-
-> [!TIP]
-> Capture possible : l'éditeur de formulaire en mode édition
 
 ### Ce que tu dis
 > "Le composant central est le Form Builder — l'éditeur de modèles d'audit. C'est celui qui m'a demandé le plus de réflexion."

@@ -36,44 +36,27 @@ export default function Difficultes() {
         </div>
       </div>
 
-      {/* Middle row — 2 cards */}
-      <div className="difficultes__row">
-        {/* Abstraction Form Builder */}
-        <div className="difficultes__card anim-fade-up" style={{ animationDelay: '0.2s' }}>
-          <div className="difficultes__card-header">
-            <div className="icon-circle"><Puzzle size={18} /></div>
-            <span className="difficultes__card-title">Abstraction Form Builder</span>
-          </div>
-          <div className="difficultes__section-label">Difficulté</div>
-          <p className="difficultes__section-desc">
-            Conception d'un système de génération de formulaires dynamiques gérant
-            de multiples types de données et relations complexes.
-          </p>
-          <div className="difficultes__separator" />
-          <div className="difficultes__section-label">Apprentissage</div>
-          <p className="difficultes__section-desc">
-            <strong>Data Modeling :</strong> Structuration rigoureuse des données,
-            normalisation et anticipation de l'évolutivité des schémas de base de données.
-          </p>
+      {/* Production & Docker — full width */}
+      <div className="difficultes__card difficultes__card--full anim-fade-up" style={{ animationDelay: '0.3s' }}>
+        <div className="difficultes__card-header">
+          <div className="icon-circle"><Box size={18} /></div>
+          <span className="difficultes__card-title">Production & Docker</span>
         </div>
-
-        {/* Production & Docker */}
-        <div className="difficultes__card anim-fade-up" style={{ animationDelay: '0.3s' }}>
-          <div className="difficultes__card-header">
-            <div className="icon-circle"><Box size={18} /></div>
-            <span className="difficultes__card-title">Production & Docker</span>
+        <div className="difficultes__card-columns">
+          <div>
+            <div className="difficultes__section-label">Difficulté</div>
+            <p className="difficultes__section-desc">
+              Déploiement en environnement de production, configuration réseau et
+              gestion de conteneurs dans des conditions réelles.
+            </p>
           </div>
-          <div className="difficultes__section-label">Difficulté</div>
-          <p className="difficultes__section-desc">
-            Déploiement en environnement de production, configuration réseau et
-            gestion de conteneurs dans des conditions réelles.
-          </p>
-          <div className="difficultes__separator" />
-          <div className="difficultes__section-label">Apprentissage</div>
-          <p className="difficultes__section-desc">
-            <strong>Rigueur DevOps :</strong> Maîtrise des concepts de conteneurisation,
-            d'intégration continue et de sécurisation des déploiements.
-          </p>
+          <div>
+            <div className="difficultes__section-label">Apprentissage</div>
+            <p className="difficultes__section-desc">
+              <strong>Rigueur DevOps :</strong> Maîtrise des concepts de conteneurisation,
+              d'intégration continue et de sécurisation des déploiements.
+            </p>
+          </div>
         </div>
       </div>
 

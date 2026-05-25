@@ -18,17 +18,34 @@
   transform: translateY(-50%);
   z-index: 100;
 
-  /* glass */
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* iOS-style glass effect */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.03) 40%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(50px) saturate(180%);
+  -webkit-backdrop-filter: blur(50px) saturate(180%);
 
-  border-radius: 16px;
+  /* Multi-layer border for depth */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top-color: rgba(255, 255, 255, 0.2);
+  border-left-color: rgba(255, 255, 255, 0.15);
+
+  border-radius: 18px;
   padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  /* Subtle outer glow + inner light */
+  box-shadow:
+    0 0 0 0.5px rgba(255, 255, 255, 0.06),
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 
   /* entrance */
   animation: slideInLeft 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
@@ -43,7 +60,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-gray, #6D6D6D);
+  color: rgba(255, 255, 255, 0.35);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -52,8 +69,8 @@
 }
 
 .sidebar__btn:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-white, #FBFCF8);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
   transform: scale(1.08);
 }
 
@@ -65,7 +82,7 @@
 
 .sidebar__btn.active {
   color: var(--primary, #FF8F00);
-  background: var(--primary-soft, rgba(255, 143, 0, 0.1));
+  background: rgba(255, 143, 0, 0.12);
 }
 
 /* ── Disabled state ──────────────────────────── */
