@@ -1,113 +1,122 @@
 import { Link } from 'react-router-dom';
-import { Compass, AlertTriangle, Search, Users, Activity, ChevronRight, CheckCircle2 } from 'lucide-react';
+import { RefreshCw, Compass, FileText, Monitor, PenTool, Zap, ClipboardList, BarChart3, ArrowRight, ChevronRight, HelpCircle } from 'lucide-react';
 import './Recul.css';
+
+const flowRows = [
+  {
+    oldIcon: FileText,
+    oldText: 'Manuel (Excel/Papier)',
+    newIcon: Monitor,
+    newText: 'Application Centralisée',
+  },
+  {
+    oldIcon: PenTool,
+    oldText: 'Signature Manuelle',
+    newIcon: Zap,
+    newText: 'Numérique + Automatique',
+  },
+  {
+    oldIcon: ClipboardList,
+    oldText: 'Évaluation Papier',
+    newIcon: BarChart3,
+    newText: 'QR Code + Dashboard',
+  },
+];
+
+const axes = [
+  {
+    title: 'Audit UX approfondi',
+    desc: "Analyser précisément l'usage réel sur le terrain pour éliminer la moindre friction.",
+  },
+  {
+    title: 'Portail Client & Onboarding',
+    desc: "Préparer un espace dédié avec un parcours d'onboarding interactif et guidé.",
+  },
+  {
+    title: 'Suivi & Pérennisation',
+    desc: "Garantir un accompagnement technique et un suivi de l'outil après mon départ.",
+  },
+];
 
 export default function Recul() {
   return (
     <div className="recul">
-      {/* Header with the massive problematic quote */}
+      {/* Header */}
       <header className="recul__header anim-fade-up">
         <span className="label">Prise de recul & Problématique</span>
-        <h1 className="recul__title">
-          « Un logiciel peut être <span>techniquement irréprochable</span> sans pour autant être <span>adopté</span>. »
+        <h1>
+          Un outil fonctionnel ne suffit pas<br />
+          <span>il faut qu'on l'adopte.</span>
         </h1>
       </header>
 
-      {/* Grid containing the TPE Reality and the 3 Strategic Axes */}
-      <div className="recul__grid">
-        
-        {/* Left Column: TPE Reality */}
-        <div className="recul__card anim-fade-up" style={{ animationDelay: '0.1s' }}>
-          <div className="recul__card-header">
-            <div className="icon-circle"><Activity size={18} /></div>
-            <span className="recul__card-title">La réalité du terrain (TPE)</span>
+      {/* Constat / Question Centrale */}
+      <div className="recul__highlight anim-fade-up" style={{ animationDelay: '0.1s' }}>
+        <div className="recul__highlight-top">
+          <div className="icon-circle">
+            <HelpCircle size={18} />
           </div>
-
-          <p className="recul__section-intro">
-            Les gains de productivité apportés par le développement de l'application sont majeurs :
-          </p>
-
-          <div className="recul__gains">
-            <div className="recul__gain-item">
-              <CheckCircle2 size={16} className="recul__gain-icon" />
-              <span>Génération automatique de rapports d'audit</span>
-            </div>
-            <div className="recul__gain-item">
-              <CheckCircle2 size={16} className="recul__gain-icon" />
-              <span>Signatures numériques centralisées</span>
-            </div>
-            <div className="recul__gain-item">
-              <CheckCircle2 size={16} className="recul__gain-icon" />
-              <span>Évaluations clients en temps réel</span>
-            </div>
-          </div>
-
-          {/* Warning Block */}
-          <div className="recul__warning">
-            <div className="recul__warning-header">
-              <AlertTriangle size={18} className="recul__warning-icon" />
-              <span>Le piège de la complexité</span>
-            </div>
-            <p className="recul__warning-text">
-              Dans une TPE sans service informatique dédié, la moindre friction est fatale. 
-              Si l'outil n'est pas <strong>immédiatement intuitif</strong>, l'utilisateur revient naturellement à ses anciennes habitudes : <strong>Excel et le papier</strong>.
-            </p>
-          </div>
+          <span className="recul__highlight-label">Question centrale</span>
         </div>
-
-        {/* Right Column: Three Axes for the Future */}
-        <div className="recul__card anim-fade-up" style={{ animationDelay: '0.2s' }}>
-          <div className="recul__card-header">
-            <div className="icon-circle"><Compass size={18} /></div>
-            <span className="recul__card-title">Pérenniser l'adoption : 3 axes</span>
-          </div>
-
-          <div className="recul__axes">
-            
-            {/* Axis 1 */}
-            <div className="recul__axe-card">
-              <div className="recul__axe-num">01</div>
-              <div className="recul__axe-content">
-                <div className="recul__axe-header">
-                  <Search size={16} className="recul__axe-icon" />
-                  <h4>Audit UX continu</h4>
-                </div>
-                <p>Analyser et mesurer les frictions d'usage réelles pour simplifier continuellement l'ergonomie globale de l'interface.</p>
-              </div>
-            </div>
-
-            {/* Axis 2 */}
-            <div className="recul__axe-card">
-              <div className="recul__axe-num">02</div>
-              <div className="recul__axe-content">
-                <div className="recul__axe-header">
-                  <Users size={16} className="recul__axe-icon" />
-                  <h4>Portail client & onboarding</h4>
-                </div>
-                <p>Préparer un portail client dédié avec un parcours guidé (onboarding) pour maximiser le taux de complétion autonome.</p>
-              </div>
-            </div>
-
-            {/* Axis 3 */}
-            <div className="recul__axe-card">
-              <div className="recul__axe-num">03</div>
-              <div className="recul__axe-content">
-                <div className="recul__axe-header">
-                  <Activity size={16} className="recul__axe-icon" />
-                  <h4>Suivi post-départ</h4>
-                </div>
-                <p>Garantir et pérenniser l'investissement technique en planifiant le suivi, la maintenance et l'évolution de l'application.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+        <p className="recul__highlight-quote">
+          « Un logiciel peut être techniquement irréprochable sans pour autant être adopté. »
+        </p>
+        <p className="recul__highlight-desc">
+          Les gains sont réels — passage du tout manuel à une automatisation complète (rapports, signatures, évaluations). Cependant, dans une <strong>TPE sans service informatique</strong>, si l'outil n'est pas immédiatement intuitif, l'utilisateur revient inévitablement à <strong>Excel</strong>.
+        </p>
       </div>
 
-      {/* Navigation to Conclusion */}
+      {/* 2 cards */}
+      <div className="recul__grid anim-fade-up" style={{ animationDelay: '0.2s' }}>
+        {/* Évolution des Processus */}
+        <div className="recul__card">
+          <div className="recul__card-header">
+            <div className="icon-circle"><RefreshCw size={18} /></div>
+            <span className="recul__card-title">Évolution des Processus</span>
+          </div>
+          <div className="recul__flow">
+            {flowRows.map((row) => {
+              const OldIcon = row.oldIcon;
+              const NewIcon = row.newIcon;
+              return (
+                <div className="recul__flow-row" key={row.oldText}>
+                  <div className="recul__flow-old">
+                    <OldIcon size={16} />
+                    <span>{row.oldText}</span>
+                  </div>
+                  <div className="recul__flow-arrow">
+                    <ArrowRight size={16} />
+                  </div>
+                  <div className="recul__flow-new">
+                    <NewIcon size={16} />
+                    <span>{row.newText}</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Axes pour l'Avenir */}
+        <div className="recul__card">
+          <div className="recul__card-header">
+            <div className="icon-circle"><Compass size={18} /></div>
+            <span className="recul__card-title">Axes de Pérennisation</span>
+          </div>
+          <div className="recul__axes">
+            {axes.map((axe) => (
+              <div className="recul__axe" key={axe.title}>
+                <div className="recul__axe-title">{axe.title}</div>
+                <div className="recul__axe-desc">{axe.desc}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Navigation vers Conclusion */}
       <Link to="/conclusion" className="recul__next anim-fade-up" style={{ animationDelay: '0.3s' }}>
-        <span>Suivant : Conclusion de la soutenance</span>
+        <span>Suivant : Conclusion & Bilan Personnel</span>
         <ChevronRight size={20} />
       </Link>
     </div>

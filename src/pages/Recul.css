@@ -14,206 +14,188 @@
 
 /* ---------- Header ---------- */
 .recul__header {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .recul__header .label {
   margin-bottom: 12px;
   display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-gray);
 }
 
-.recul__title {
-  font-size: 2.25rem;
+.recul__header h1 {
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--text-white);
-  line-height: 1.35;
+  line-height: 1.25;
   font-style: italic;
-  max-width: 1000px;
 }
 
-.recul__title span {
+.recul__header h1 span {
   color: var(--primary);
-  font-style: normal;
 }
 
 /* ---------- Grid ---------- */
 .recul__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 24px;
+  gap: 16px;
 }
 
 /* ---------- Cards ---------- */
 .recul__card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 28px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  flex-direction: column;
+  transition: border-color 0.3s;
 }
 
 .recul__card:hover {
   border-color: rgba(255, 143, 0, 0.2);
-  background: rgba(255, 255, 255, 0.04);
 }
 
 .recul__card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 24px;
 }
 
 .recul__card-title {
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-white);
 }
 
-.recul__section-intro {
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* ---------- Gains ---------- */
-.recul__gains {
+/* ---------- Flow (before → after) ---------- */
+.recul__flow {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
-  flex-grow: 1;
+  gap: 12px;
 }
 
-.recul__gain-item {
+.recul__flow-row {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--text-white);
-  font-size: 0.8125rem;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  transition: all 0.2s;
 }
 
-.recul__gain-item:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
-.recul__gain-icon {
-  color: #10B981;
-  flex-shrink: 0;
-}
-
-/* ---------- Warning ---------- */
-.recul__warning {
-  background: rgba(245, 158, 11, 0.03);
-  border: 1px solid rgba(245, 158, 11, 0.15);
-  border-radius: 12px;
-  padding: 20px;
-  transition: all 0.3s;
-}
-
-.recul__warning:hover {
-  background: rgba(245, 158, 11, 0.05);
-  border-color: rgba(245, 158, 11, 0.25);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.05);
-}
-
-.recul__warning-header {
+.recul__flow-old {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--primary);
-  margin-bottom: 8px;
+  font-size: 0.8125rem;
+  color: var(--text-gray);
+  flex: 1;
 }
 
-.recul__warning-icon {
-  color: var(--primary);
+.recul__flow-old svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
   flex-shrink: 0;
 }
 
-.recul__warning-text {
-  font-size: 0.8125rem;
+.recul__flow-arrow {
   color: var(--text-gray);
-  line-height: 1.6;
+  opacity: 0.4;
+  display: flex;
+  flex-shrink: 0;
 }
 
-.recul__warning-text strong {
+.recul__flow-new {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
   color: var(--text-white);
-  font-weight: 600;
+  font-weight: 500;
+  flex: 1;
+  background: rgba(255, 143, 0, 0.08);
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 143, 0, 0.15);
+}
+
+.recul__flow-new svg {
+  width: 16px;
+  height: 16px;
+  color: var(--primary);
+  flex-shrink: 0;
 }
 
 /* ---------- Axes ---------- */
 .recul__axes {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-}
-
-.recul__axe-card {
-  display: flex;
   gap: 16px;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid rgba(255, 255, 255, 0.03);
-  border-radius: 12px;
-  padding: 16px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.recul__axe-card:hover {
-  border-color: rgba(255, 143, 0, 0.18);
-  background: rgba(255, 143, 0, 0.02);
-  transform: translateX(4px);
+.recul__axe {
+  padding-left: 12px;
+  border-left: 2px solid rgba(255, 143, 0, 0.3);
 }
 
-.recul__axe-num {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: rgba(255, 143, 0, 0.3);
-  font-family: monospace, sans-serif;
-  line-height: 1;
-}
-
-.recul__axe-content {
-  flex: 1;
-}
-
-.recul__axe-header {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 6px;
-}
-
-.recul__axe-icon {
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.recul__axe-content h4 {
-  font-size: 0.875rem;
-  font-weight: 700;
+.recul__axe-title {
+  font-weight: 600;
   color: var(--text-white);
+  margin-bottom: 4px;
+  font-size: 0.9375rem;
 }
 
-.recul__axe-content p {
+.recul__axe-desc {
   font-size: 0.8125rem;
   color: var(--text-gray);
   line-height: 1.5;
+}
+
+/* ---------- Highlight card ---------- */
+.recul__highlight {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  transition: border-color 0.3s;
+}
+
+.recul__highlight:hover {
+  border-color: rgba(255, 143, 0, 0.2);
+}
+
+.recul__highlight-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.recul__highlight-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.recul__highlight-quote {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.recul__highlight-desc {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+.recul__highlight-desc strong {
+  color: var(--text-white);
 }
 
 /* ---------- Next page link ---------- */
@@ -222,7 +204,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 24px;
+  margin-top: 32px;
   padding: 14px 28px;
   border-radius: 12px;
   background: rgba(255, 143, 0, 0.06);
