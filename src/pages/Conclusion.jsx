@@ -44,7 +44,7 @@ export default function Conclusion() {
       <footer className="conclusion__footer anim-fade-up" style={{ animationDelay: '0.65s' }}>
         <img src="/logo.png" alt="DEKKERS SAS" className="conclusion__logo" />
         <div className="conclusion__merci">Merci</div>
-        <div className="conclusion__names">M. Johannes DEKKERS · Gauthier BALP</div>
+        <div className="conclusion__names">M. Johannes DEKKERS · Gauthier BALP · IUT Béziers</div>
       </footer>
     </div>
   );

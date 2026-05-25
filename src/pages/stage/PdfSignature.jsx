@@ -42,102 +42,110 @@ export default function PdfSignature() {
         </p>
       </div>
 
-      {/* Top row */}
-      <div className="pdfsig__top">
-        {/* Génération PDF */}
-        <div
-          className="pdfsig__card anim-fade-up"
-          style={{ animationDelay: '0.1s' }}
-        >
-          <div className="pdfsig__card-header">
-            <div className="icon-circle">
-              <FileText size={18} />
+      {/* Main 2-column layout */}
+      <div className="pdfsig__main">
+        {/* Left Column: Details Cards */}
+        <div className="pdfsig__content">
+          {/* Génération PDF */}
+          <div
+            className="pdfsig__card anim-fade-up"
+            style={{ animationDelay: '0.1s' }}
+          >
+            <div className="pdfsig__card-header">
+              <div className="icon-circle">
+                <FileText size={18} />
+              </div>
+              <span className="pdfsig__card-title">Génération PDF</span>
             </div>
-            <span className="pdfsig__card-title">Génération PDF</span>
+
+            <p className="pdfsig__tech-name">Technologie : Puppeteer</p>
+            <p className="pdfsig__tech-desc">
+              Conversion de vues HTML complexes en documents PDF haute fidélité via
+              un navigateur headless.
+            </p>
+
+            <div className="pdfsig__divider" />
+
+            <p className="pdfsig__tech-name">Défi Technique</p>
+            <p className="pdfsig__tech-desc">
+              Gestion complexe des sauts de page (page breaks) pour les rapports longs, nécessitant des algorithmes de calcul de hauteur en temps réel.
+            </p>
           </div>
 
-          <p className="pdfsig__tech-name">Technologie : Puppeteer</p>
-          <p className="pdfsig__tech-desc">
-            Conversion de vues HTML complexes en documents PDF haute fidélité via
-            un navigateur headless.
-          </p>
-
-          <div className="pdfsig__divider" />
-
-          <p className="pdfsig__tech-name">Défi Technique</p>
-          <p className="pdfsig__tech-desc">
-            Gestion complexe des sauts de page (page breaks) pour les tableaux
-            dynamiques et les sections de rapports longs, nécessitant des
-            algorithmes de calcul de hauteur en temps réel.
-          </p>
-        </div>
-
-        {/* Signature Propriétaire */}
-        <div
-          className="pdfsig__card anim-fade-up"
-          style={{ animationDelay: '0.2s' }}
-        >
-          <div className="pdfsig__card-header">
-            <div className="icon-circle">
-              <PenTool size={18} />
+          {/* Signature Propriétaire */}
+          <div
+            className="pdfsig__card anim-fade-up"
+            style={{ animationDelay: '0.2s' }}
+          >
+            <div className="pdfsig__card-header">
+              <div className="icon-circle">
+                <PenTool size={18} />
+              </div>
+              <span className="pdfsig__card-title">Signature Propriétaire</span>
             </div>
-            <span className="pdfsig__card-title">Signature Propriétaire</span>
+
+            <span className="pdfsig__sig-label">
+              Alternative in-house à Adobe Sign
+            </span>
+
+            <div className="pdfsig__flow">
+              {flowSteps.map((step, i) => {
+                const Icon = step.icon;
+                return (
+                  <React.Fragment key={step.name}>
+                    <div
+                      className={`pdfsig__flow-step${step.highlight ? ' pdfsig__flow-step--highlight' : ''}`}
+                    >
+                      <div className="icon-circle">
+                        <Icon size={16} />
+                      </div>
+                      <span className="pdfsig__flow-step-name">{step.name}</span>
+                      <span className="pdfsig__flow-step-desc">{step.desc}</span>
+                    </div>
+                    {i < flowSteps.length - 1 && (
+                      <div className="pdfsig__flow-arrow">
+                        <ChevronRight size={16} />
+                      </div>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </div>
           </div>
 
-          <span className="pdfsig__sig-label">
-            Alternative in-house à Adobe Sign
-          </span>
+          {/* Milestone */}
+          <div
+            className="pdfsig__milestone anim-fade-up"
+            style={{ animationDelay: '0.3s' }}
+          >
+            <div className="icon-circle icon-circle--orange">
+              <Trophy size={20} />
+            </div>
 
-          <div className="pdfsig__flow">
-            {flowSteps.map((step, i) => {
-              const Icon = step.icon;
-              return (
-                <React.Fragment key={step.name}>
-                  <div
-                    className={`pdfsig__flow-step${step.highlight ? ' pdfsig__flow-step--highlight' : ''}`}
-                  >
-                    <div className="icon-circle">
-                      <Icon size={16} />
-                    </div>
-                    <span className="pdfsig__flow-step-name">{step.name}</span>
-                    <span className="pdfsig__flow-step-desc">{step.desc}</span>
-                  </div>
-                  {i < flowSteps.length - 1 && (
-                    <div className="pdfsig__flow-arrow">
-                      <ChevronRight size={16} />
-                    </div>
-                  )}
-                </React.Fragment>
-              );
-            })}
+            <div className="pdfsig__milestone-content">
+              <span className="pdfsig__milestone-label">Milestone atteint</span>
+              <h3 className="pdfsig__milestone-title">Premier Rapport Signé</h3>
+              <p className="pdfsig__milestone-desc">
+                Validation complète du flux de travail : de la saisie sur le terrain jusqu'à la génération du PDF final sécurisé avec certificat de signature in-house.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Milestone */}
-      <div
-        className="pdfsig__milestone anim-fade-up"
-        style={{ animationDelay: '0.3s' }}
-      >
-        <div className="icon-circle icon-circle--orange">
-          <Trophy size={20} />
+        {/* Right Column: Large Interactive PDF Preview */}
+        <div
+          className="pdfsig__preview-container anim-fade-up"
+          style={{ animationDelay: '0.25s' }}
+        >
+          <span className="pdfsig__preview-label">Aperçu du Rapport PDF finalisé</span>
+          <div className="pdfsig__preview-frame">
+            <img
+              src="/pdf_rapport.png"
+              alt="Rapport PDF signé"
+              className="pdfsig__preview-img"
+            />
+          </div>
         </div>
-
-        <div className="pdfsig__milestone-content">
-          <span className="pdfsig__milestone-label">Milestone atteint</span>
-          <h3 className="pdfsig__milestone-title">Premier Rapport Signé</h3>
-          <p className="pdfsig__milestone-desc">
-            Validation complète du flux de travail : de la saisie des données
-            sur le terrain jusqu'à la génération du PDF final incluant le
-            certificat de signature cryptographique in-house.
-          </p>
-        </div>
-
-        <img
-          src="/pdf_rapport.png"
-          alt="Rapport PDF signé"
-          className="pdfsig__milestone-img"
-        />
       </div>
     </div>
   );

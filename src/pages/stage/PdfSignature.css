@@ -29,13 +29,20 @@
   font-size: 1.05rem;
 }
 
-/* ---- Top Row Grid ---- */
+/* ---- Main Grid Layout ---- */
 
-.pdfsig__top {
+.pdfsig__main {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.pdfsig__content {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  margin-bottom: 16px;
 }
 
 /* ---- Glass Cards ---- */
@@ -192,12 +199,55 @@
   line-height: 1.6;
 }
 
-.pdfsig__milestone-img {
-  max-height: 140px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  transform: rotate(-2deg);
-  flex-shrink: 0;
+/* ---- PDF Preview Column ---- */
+
+.pdfsig__preview-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pdfsig__preview-label {
+  font-size: 0.75rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.pdfsig__preview-frame {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.01), 0 8px 32px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(50px) saturate(180%);
+  overflow: hidden;
+  min-height: 520px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pdfsig__preview-frame:hover {
+  border-color: rgba(255, 143, 0, 0.25);
+  box-shadow: inset 0 0 30px rgba(255, 143, 0, 0.04), 0 12px 48px rgba(0, 0, 0, 0.6);
+}
+
+.pdfsig__preview-img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pdfsig__preview-frame:hover .pdfsig__preview-img {
+  transform: scale(1.025);
 }
 
 /* ---- Animations ---- */
