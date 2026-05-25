@@ -104,8 +104,77 @@
 .architecture__tag {
   padding: 5px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--text-gray);
   white-space: nowrap;
+  position: relative;
+  cursor: help;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.architecture__tag:hover {
+  background: rgba(255, 143, 0, 0.1);
+  color: var(--primary);
+  border-color: rgba(255, 143, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+/* ── Tooltips ── */
+.architecture__tag::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 135%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  background: rgba(13, 13, 17, 0.98);
+  border: 1px solid rgba(255, 143, 0, 0.35);
+  color: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: normal;
+  width: 250px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px) saturate(120%);
+  text-align: left;
+}
+
+/* Subtle triangle for the tooltip */
+.architecture__tag::before {
+  content: '';
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(255, 143, 0, 0.35) transparent transparent transparent;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.architecture__tag:hover::after,
+.architecture__tag:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── Dev Environment card ── */
+.architecture__card--dev {
+  border-color: rgba(255, 143, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.005));
+}
+
+.architecture__card--dev:hover {
+  border-color: rgba(255, 143, 0, 0.25);
 }

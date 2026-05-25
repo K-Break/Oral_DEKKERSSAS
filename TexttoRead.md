@@ -175,7 +175,7 @@ Ma méthodologie reposait sur un point matinal quotidien avec M. DEKKERS — une
 >
 > "Les gains sont réels — on est passé du tout manuel à une application qui automatise la génération de rapports, les signatures, les évaluations. Mais dans une TPE, il n'y a pas de service informatique. Si l'outil n'est pas immédiatement intuitif, l'utilisateur revient à Excel."
 >
-> "C'est pourquoi je propose trois axes pour pérenniser l'adoption : un audit UX, la préparation d'un portail client avec onboarding guidé, et un investissement dans la documentation technique pour que l'application survive après mon départ."
+> "C'est pourquoi je propose trois axes pour pérenniser l'adoption : un audit UX, la préparation d'un portail client avec onboarding guidé, et un investissement dans le suivie de l'application après mon départ"
 
 ---
 
