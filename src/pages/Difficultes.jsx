@@ -22,7 +22,7 @@ export default function Difficultes() {
           </div>
           <span className="difficultes__highlight-title">Inconnues techniques</span>
           <ArrowRight size={18} className="difficultes__highlight-arrow" />
-          <span className="difficultes__highlight-title"><em>Learning to learn</em></span>
+          <span className="difficultes__highlight-title"><em>Apprendre à apprendre</em></span>
         </div>
         <p className="difficultes__highlight-desc">
           Face à des technologies non maîtrisées initialement, l'enjeu principal

@@ -170,25 +170,6 @@ Ma méthodologie reposait sur un point matinal quotidien avec M. DEKKERS — une
 
 ## Slide 10 — Prise de recul & problématique (~1 min 30)
 
-### Sur la slide
-**"Un outil fonctionnel ne suffit pas — il faut qu'on l'adopte"**
-
-Avant/Après visuel :
-| Avant | Après |
-|---|---|
-| Excel, Word, papier | App centralisée |
-| Envoi manuel | Signature numérique + envoi auto |
-| Évaluations papier | QR code + dashboard analytique |
-| Pas de traçabilité | Versioning automatique |
-
-**L'enjeu :** Dans une TPE de 3 personnes, pas de service info ni de formation dédiée.
-L'outil doit être **immédiatement intuitif** sinon → retour aux anciennes habitudes.
-
-**Mes recommandations :**
-1. 🎨 Audit UX & identité visuelle
-2. 👥 Portail client avec onboarding guidé
-3. 🔧 Pérennité technique (doc, tests)
-
 ### Ce que tu dis
 > "Cette réflexion m'amène à la question centrale de mon stage : un logiciel peut être techniquement irréprochable sans pour autant être adopté."
 >
